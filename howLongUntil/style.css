@@ -1,0 +1,198 @@
+html {
+    background-color: #1b1b1b;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#box {
+    background-color: black;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    transition: transform 1s ease-in-out;
+}
+
+#box:hover {
+    transform: rotateZ(360deg) scale(1.2);
+}
+
+#root {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+}
+
+#menu {
+    position: absolute;
+    left: 116px;
+    top: 35px;
+    color: white;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+#menu li {
+    float: left;
+}
+
+#menu a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+#menu a:hover {
+    background-color: black;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+fieldset {
+    margin: 25px;
+    padding: 10px;
+}
+
+main {
+    padding: 0;
+    background-color: #333333;
+    position: absolute;
+    left: 25px;
+    top: 116px;
+    height: calc(100vh - 110px - 65px);
+    width: calc(100vw - 50px);
+}
+
+#mainContent {
+    margin: 25px;
+}
+
+.link {
+    color: darkorange;
+    font-size: 18px;
+}
+
+#flexing {
+    display: flex;
+    flex-direction: none;
+}
+
+#inputs {
+    flex-grow: 1;
+}
+
+input[type='button'] {
+    margin-left: 25px;
+    padding: 10px;
+}
+
+#right {
+    flex-grow: 3;
+}
+
+#right ul {
+    list-style: none;
+}
+
+#pizzaOverviewH1 {
+    margin-left: 0;
+}
+
+@media (max-width: 650px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    #right {
+        flex-grow: 1;
+    }
+}
+
+.text {
+    width: 200px;
+    padding: 10px;
+}
+
+#pizzaList {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+#pizzaList td {
+    background-color: #00B7FF;
+    border: 2px solid black;
+}
+
+#pizzaList th {
+    background-color: darkorange;
+    border: 2px solid black;
+}
+
+.delete {
+    width: 30px;
+    padding: 10px;
+    background-color: #00B7FF;
+}
+
+#right img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#headTitle {
+    padding-left: 25px;
+    padding-bottom: 0px;
+}
+
+#credits {
+    color: white;
+    position: absolute;
+    bottom: 25px;
+    height: 25px;
+}
+
+@media (orientation: portrait) {
+    html {
+        height: 100vh;
+    }
+    main {
+        height: calc(100vh - 110px - 65px);
+        width: calc(100vw - 50px);
+    }
+    h1 {
+        font-size: 50px;
+    }
+    table {
+        font-size: 22px;
+    }
+    #menu {
+        top: 20px;
+    }
+    #menu a {
+        font-size: 42px;
+    }
+}

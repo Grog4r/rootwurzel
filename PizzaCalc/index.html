@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pizza Calculator</title>
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="../favicon.png">
+    <meta charset="UTF-8" />
+</head>
+
+
+<body>
+    <header>
+        <div id="box" onclick="home()">
+            <div id="root">&lt;&#47;root&gt;</div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="mainContent">
+            <h1 id="headTitle">Pizza Calculator</h1>
+            <div id="flexing">
+                <section id="inputs">
+                    <form>
+                        <fieldset>
+                            <legend><b>Select Pizza Shape</b></legend>
+
+                            <div class="control">
+                                <label class="radio">
+                            <input type="radio" name="shape" id="round" onclick="checkRadio('round')" checked>
+                            Round
+                        </label>
+                                <label class="radio">
+                            <input type="radio" name="shape" id="rectangle" onclick="checkRadio('rectangle')">
+                            Rectangle
+                        </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><b>Input Parameters here</b></legend>
+                            <input type="number" id="diameter" placeholder="Diameter in cm" pattern="^[0-9]+$" title="Only numbers are allowed."> <span id="roundP">cm</span>
+                            <input type="number" id="length" placeholder="Length in cm" hidden pattern="^[0-9]+$" title="Only numbers are allowed."> <span id="rectP1" hidden>cm<br></span>
+                            <input type="number" id="width" placeholder="Width in cm" hidden pattern="^[0-9]+$" title="Only numbers are allowed."> <span id="rectP2" hidden>cm</span>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><b>Input Price here</b></legend>
+                            <input type="number" id="price" placeholder="Price in €"> €
+                        </fieldset>
+                        <input type="button" value="Calculate" onclick="calc()">
+                    </form>
+
+                </section>
+
+                <section id="right">
+
+                    <h1 id="pizzaOverviewH1">Pizza Overview</h1>
+                    <table id="pizzaList">
+                        <tr>
+                            <th class='text'>Name:</th>
+                            <th class='text'>Area per Euro:</th>
+                            <th class='text'>Price:</th>
+                            <th class="delete">&nbsp;</th>
+                        </tr>
+                    </table>
+
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="credits">
+            <p>&#9400; Niklas Küchen</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
